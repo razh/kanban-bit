@@ -1,0 +1,9 @@
+@font-face {
+  font-family: eight-bit;
+  src: url("/fonts/04B_03__.TTF"); }
+
+body {
+  font-family: eight-bit;
+  -webkit-font-smoothing: antialiased;
+  color: #ecf0f1;
+  background-color: #0c1e20; }
