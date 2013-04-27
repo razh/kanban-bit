@@ -14,11 +14,31 @@
 
       <input type="text" ng-model="search">
       <div ng-controller="CardCtrl">{{test | pop}}
-        <ul>
-          <li ng-repeat="card in cards | filter: search">
-            <div card click enter="red" leave></div>
-          </li>
-        </ul>
+        <div class="span4 pull-left">
+          <ul>
+            <li ng-repeat="card in cards | filter: search">
+              <div class="card" click enter="red select" leave></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div ng-controller="CardCtrl">
+        <div class="span4 pull-left">
+          <ul>
+            <li ng-repeat="card in cards | filter: search">
+              <div class="card" click enter="red select" leave></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div ng-controller="CardCtrl">
+        <div class="span4 pull-left">
+          <ul>
+            <li ng-repeat="card in cards | filter: search">
+              <div class="card" click enter="red select" leave></div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 

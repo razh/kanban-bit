@@ -1,5 +1,7 @@
-$color: #ecf0f1;
+$color: #95a5a6;
 $background-color: #0c1e20;
+
+$card-border: 5px;
 
 @font-face {
   font-family: eight-bit;
@@ -14,10 +16,43 @@ body {
   background-color: $background-color;
 }
 
+ul {
+  list-style-type: none;
+}
+
 li {
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
+}
+
+.card {
+  padding: 5px;
+
+  &:hover {
+    color: white;
+
+    border: $card-border solid white;
+    border-style: dashed;
+
+    margin: -$card-border;
+  }
+
+  .card-title {
+    color: #bdc3c7;
+  }
 }
 
 .red {
   color: red;
+}
+
+div:focus {
+  outline: none;
+}
+
+.span4 {
+  width: 300px;
+}
+
+.pull-left {
+  float: left;
 }

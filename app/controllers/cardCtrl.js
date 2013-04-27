@@ -37,7 +37,13 @@ kanbanBit.filter( 'pop', function( Data ) {
 
 kanbanBit.directive( 'card', function() {
   return {
-    template: '<div>{{ card.title }}</div><div>{{ card.text }}</div>'
+    restrict: 'C',
+    template: '<div class="card-title">' +
+                '{{ card.title }}' +
+              '</div>' +
+              '<div class="card-text">' +
+               '{{ card.text }}' +
+              '</div>'
   };
 });
 

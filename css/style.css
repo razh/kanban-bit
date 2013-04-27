@@ -5,11 +5,33 @@
 body {
   font-family: eight-bit;
   -webkit-font-smoothing: antialiased;
-  color: #ecf0f1;
+  color: #95a5a6;
   background-color: #0c1e20; }
 
+ul {
+  list-style-type: none; }
+
 li {
-  margin-bottom: 2rem; }
+  margin-bottom: 20px; }
+
+.card {
+  padding: 5px; }
+  .card:hover {
+    color: white;
+    border: 5px solid white;
+    border-style: dashed;
+    margin: -5px; }
+  .card .card-title {
+    color: #bdc3c7; }
 
 .red {
   color: red; }
+
+div:focus {
+  outline: none; }
+
+.span4 {
+  width: 300px; }
+
+.pull-left {
+  float: left; }
