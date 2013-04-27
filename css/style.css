@@ -7,3 +7,9 @@ body {
   -webkit-font-smoothing: antialiased;
   color: #ecf0f1;
   background-color: #0c1e20; }
+
+li {
+  margin-bottom: 2rem; }
+
+.red {
+  color: red; }
