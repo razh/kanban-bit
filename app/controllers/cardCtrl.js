@@ -20,6 +20,10 @@ kanbanBit.factory( 'Cards', function() {
 kanbanBit.controller( 'CardCtrl', function( $scope, Cards ) {
   $scope.cards = Cards;
   $scope.test = 'test';
+
+  $scope.output = function() {
+    console.log( 'output' );
+  };
 });
 
 kanbanBit.factory( 'Data', function() {
@@ -59,6 +63,7 @@ kanbanBit.directive( 'enter', function() {
   return function( scope, element, attrs ) {
     element.bind( 'mouseenter', function() {
       element.addClass( attrs.enter );
+      scope.$apply( attrs.execute );
     });
   };
 });
