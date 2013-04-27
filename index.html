@@ -16,7 +16,7 @@
       <div ng-controller="CardCtrl">{{test | pop}}
         <ul>
           <li ng-repeat="card in cards | filter: search">
-            <div card enter="red" leave></div>
+            <div card click enter="red" leave></div>
           </li>
         </ul>
       </div>

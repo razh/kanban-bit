@@ -41,6 +41,14 @@ kanbanBit.directive( 'card', function() {
   };
 });
 
+kanbanBit.directive( 'click', function() {
+  return function( scope, element ) {
+    element.bind( 'click', function() {
+      element.attr( 'contenteditable', 'true' );
+    });
+  };
+});
+
 kanbanBit.directive( 'enter', function() {
   return function( scope, element, attrs ) {
     element.bind( 'mouseenter', function() {
