@@ -1,6 +1,7 @@
 kanbanBit.factory( 'Boards', function() {
   var Boards = [
     {
+      title: 'To do',
       cards: [
         {
           title: 'title1',
@@ -17,6 +18,7 @@ kanbanBit.factory( 'Boards', function() {
       ]
     },
     {
+      title: 'Doing',
       cards: [
         {
           title: 'Start of Board 2',
@@ -29,6 +31,7 @@ kanbanBit.factory( 'Boards', function() {
       ]
     },
     {
+      title: 'Done',
       cards: [
         {
           title: 'Board 3, here we go!',

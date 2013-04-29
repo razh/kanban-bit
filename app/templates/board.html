@@ -1,3 +1,4 @@
+<div class="board-title">{{board.title}}</div>
 <ul>
   <li ng-repeat="card in board.cards | filter: search">
     <div class="card" click enter="red select" leave board={{$parent.$index}} card={{$index}}></div>

@@ -1,7 +1,16 @@
-$color: #95a5a6;
+$text-color: #95a5a6;
 $background-color: #0c1e20;
 
 $card-border: 5px;
+
+@mixin card-border($color, $border-width) {
+  color: $color;
+
+  border: $border-width solid $color;
+  border-style: dashed;
+
+  margin: -$border-width;
+}
 
 @font-face {
   font-family: eight-bit;
@@ -12,7 +21,7 @@ body {
   font-family: eight-bit;
   -webkit-font-smoothing: antialiased;
 
-  color: $color;
+  color: $text-color;
   background-color: $background-color;
 }
 
@@ -28,12 +37,7 @@ li {
   padding: 5px;
 
   &:hover {
-    color: white;
-
-    border: $card-border solid white;
-    border-style: dashed;
-
-    margin: -$card-border;
+    @include card-border(white, $card-border);
   }
 
   .card-title {
@@ -42,8 +46,8 @@ li {
 }
 
 .add-card {
-  padding: 5px;
   text-align: center;
+  color: white;
 
   -webkit-user-select: none;
    -khtml-user-select: none;
@@ -51,13 +55,13 @@ li {
       -ms-user-select: none;
 
   &:hover {
-    color: white;
-
-    border: $card-border solid white;
-    border-style: dashed;
-
-    margin: -$card-border;
+    @include card-border(white, $card-border);
   }
+}
+
+.board-title {
+  text-align: center;
+  color: white;
 }
 
 .red {
@@ -66,6 +70,10 @@ li {
 
 div:focus {
   outline: none;
+}
+
+.row {
+  width: 100%;
 }
 
 .span4 {

@@ -25,8 +25,8 @@ li {
     color: #bdc3c7; }
 
 .add-card {
-  padding: 5px;
   text-align: center;
+  color: white;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -37,11 +37,18 @@ li {
     border-style: dashed;
     margin: -5px; }
 
+.board-title {
+  text-align: center;
+  color: white; }
+
 .red {
   color: red; }
 
 div:focus {
   outline: none; }
+
+.row {
+  width: 100%; }
 
 .span4 {
   width: 300px; }
