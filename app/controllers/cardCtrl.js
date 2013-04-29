@@ -1,35 +1,3 @@
-kanbanBit.factory( 'Cards', function() {
-  var Cards = [
-    {
-      title: 'title1',
-      text: 'hello my name is steve'
-    },
-    {
-      title: 'The Great Gatsby',
-      text: 'It was the best of tines, it was the worst of rhymes.'
-    },
-    {
-      title: 'A Practical Guide to Precision Sugar Dispensers of the 19th Century',
-      text: 'I want to go to there.'
-    }
-  ];
-
-  return Cards;
-});
-
-kanbanBit.controller( 'CardCtrl', [ '$scope', 'Cards', function( $scope, Cards ) {
-  $scope.cards = Cards;
-  $scope.test = 'test';
-
-  this.output = function() {
-    console.log( 'output' );
-  };
-
-  $scope.CardCtrl = this;
-
-  return this;
-}]);
-
 kanbanBit.factory( 'Data', function() {
   return {
     test: '1234'
@@ -42,11 +10,23 @@ kanbanBit.filter( 'pop', function( Data ) {
   };
 });
 
+kanbanBit.directive( 'board', function() {
+  return {
+    restrict: 'C',
+    templateUrl: 'app/templates/board.html'
+  };
+});
 
 kanbanBit.directive( 'card', function() {
   return {
     restrict: 'C',
-    templateUrl: 'app/templates/card.html'
+    templateUrl: 'app/templates/card.html',
+
+    link: function( scope, element, attrs ) {
+      element.bind( 'click', function() {
+        console.log( 'card: ' + element.attr( 'card' ) + ', ' + element.attr( 'board' ) );
+      });
+    }
   };
 });
 

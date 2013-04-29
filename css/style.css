@@ -24,6 +24,19 @@ li {
   .card .card-title {
     color: #bdc3c7; }
 
+.add-card {
+  padding: 5px;
+  text-align: center;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
+  .add-card:hover {
+    color: white;
+    border: 5px solid white;
+    border-style: dashed;
+    margin: -5px; }
+
 .red {
   color: red; }
 

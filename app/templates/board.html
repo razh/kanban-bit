@@ -1,0 +1,6 @@
+<ul>
+  <li ng-repeat="card in board.cards | filter: search">
+    <div class="card" click enter="red select" leave board={{$parent.$index}} card={{$index}}></div>
+  </li>
+  <div class="add-card" ng-click="addCard($index)">+</div>
+</ul>
