@@ -17,14 +17,18 @@ kanbanBit.factory( 'Cards', function() {
   return Cards;
 });
 
-kanbanBit.controller( 'CardCtrl', function( $scope, Cards ) {
+kanbanBit.controller( 'CardCtrl', [ '$scope', 'Cards', function( $scope, Cards ) {
   $scope.cards = Cards;
   $scope.test = 'test';
 
-  $scope.output = function() {
+  this.output = function() {
     console.log( 'output' );
   };
-});
+
+  $scope.CardCtrl = this;
+
+  return this;
+}]);
 
 kanbanBit.factory( 'Data', function() {
   return {
@@ -42,12 +46,7 @@ kanbanBit.filter( 'pop', function( Data ) {
 kanbanBit.directive( 'card', function() {
   return {
     restrict: 'C',
-    template: '<div class="card-title">' +
-                '{{ card.title }}' +
-              '</div>' +
-              '<div class="card-text">' +
-               '{{ card.text }}' +
-              '</div>'
+    templateUrl: 'app/templates/card.html'
   };
 });
 
