@@ -1,7 +1,7 @@
 $text-color: #95a5a6;
 $background-color: #0c1e20;
 
-$card-border: 5px;
+$card-border: 4px;
 
 @mixin card-border($color, $border-width) {
   color: $color;
@@ -41,7 +41,19 @@ li {
   }
 
   .card-title {
+    border: 0;
+    font-family: eight-bit;
     color: #bdc3c7;
+    width: 100%;
+    background-color: $background-color;
+  }
+
+  .card-text {
+    border: 0;
+    font-family: eight-bit;
+    color: $text-color;
+    width: 100%;
+    background-color: $background-color;
   }
 }
 

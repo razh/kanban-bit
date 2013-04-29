@@ -13,6 +13,7 @@
       <div class="row">
         <ng-view></ng-view>
         <input type="text" ng-model="search">
+        <button debug></button>
       </div>
       <div class="span4 pull-left" ng-controller="BoardCtrl" ng-repeat="board in boards" ng-model="board">
         <div class="board" board={{$index}}></div>

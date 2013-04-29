@@ -1,7 +1,7 @@
-<div class="board-title">{{board.title}}</div>
+<div class="board-title" editable ng-model="board.title"></div>
 <ul>
   <li ng-repeat="card in board.cards | filter: search">
-    <div class="card" click enter="red select" leave board={{$parent.$index}} card={{$index}}></div>
+    <div class="card" board={{$parent.$index}} card={{$index}}></div>
   </li>
   <div class="add-card" ng-click="addCard($index)">+</div>
 </ul>
